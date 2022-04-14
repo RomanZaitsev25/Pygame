@@ -239,6 +239,8 @@ player_img = pygame.image.load(path.join(img_dir, "ship.png")).convert()
 # meteor_img = pygame.image.load(path.join(img_dir, "meteor.png")).convert()
 bullet_img = pygame.image.load(path.join(img_dir, "fire.png")).convert()
 shoot_sound = pygame.mixer.Sound(path.join(snd_dir, 'pew.wav'))
+pygame.mixer.music.load(path.join(snd_dir, 'tgfcoder-FrozenJam-SeamlessLoop.ogg'))
+pygame.mixer.music.set_volume(0.4)
 meteor_images = []
 meteor_lst = ['meteorBrown_big1.png', 'meteorBrown_Med.png',
               'meteorBrown_med1.png', 'meteorBrown_med3.png',
@@ -281,6 +283,7 @@ for i in range(8):
     # all_sprites.add(m)
     # mobs.add(m)
 score = 0
+pygame.mixer.music.play(loops=-1)
 
 
 
